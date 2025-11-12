@@ -1,0 +1,171 @@
+/* ClearJP — Modern Unified Styles
+   NOTE: Adjust --brand-primary and --accent-cta to match your official logo color palette.
+   Replace the placeholder SVG logo in /assets/logo.svg with your official logo file (same name).
+*/
+
+:root{
+  --brand-primary: #006d77; /* set to your logo primary color */
+  --brand-accent: #83c5be;  /* secondary tone derived from logo */
+  --accent-cta: #ffb703;    /* accent CTA (ensure contrast with primary) */
+  --text-dark: #1b1b1b;
+  --bg: #f7f9fa;
+  --surface: #ffffff;
+  --muted: #5a6c6c;
+  --radius: 12px;
+  --focus-ring: 0 0 0 3px rgba(0,109,119,0.18);
+  --max-width: 1100px;
+  --shadow: 0 6px 18px rgba(13,38,40,0.06);
+}
+
+/* Reset */
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background:var(--bg);
+  color:var(--text-dark);
+  -webkit-font-smoothing:antialiased;
+  line-height:1.6;
+}
+
+/* Layout */
+.container{max-width:var(--max-width);margin:0 auto;padding:1rem}
+.site-header{position:sticky;top:0;z-index:60;background:var(--surface);box-shadow:var(--shadow)}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:.9rem 1rem}
+.brand{display:flex;gap:.75rem;align-items:center}
+.brand-mini{display:flex;align-items:center;gap:.5rem;text-decoration:none}
+.logo{width:56px;height:56px;border-radius:10px;display:flex;align-items:center;justify-content:center}
+.brand-name{font-weight:700;color:var(--brand-primary);font-size:1.15rem}
+.brand-tag{font-size:.9rem;color:var(--muted)}
+
+/* Nav */
+.nav-list{display:flex;gap:.75rem;list-style:none;align-items:center}
+.nav-list a{color:var(--text-dark);text-decoration:none;padding:.45rem .65rem;border-radius:10px;font-weight:600}
+.nav-list a:focus, .nav-list a:hover{background:var(--brand-accent);color:#fff}
+
+/* Buttons */
+.btn{display:inline-block;padding:.55rem .9rem;border-radius:10px;border:none;cursor:pointer;font-weight:600}
+.btn.primary{background:var(--brand-primary);color:#fff;box-shadow:0 6px 12px rgba(0,109,119,0.08)}
+.btn.outline{background:transparent;border:2px solid var(--brand-primary);color:var(--brand-primary)}
+.btn.small{padding:.4rem .6rem;font-size:.95rem}
+.btn.full{width:100%}
+
+/* Hero */
+.hero{display:grid;grid-template-columns:1fr 360px;gap:1.4rem;padding:2rem 0;align-items:start}
+.hero-left h1{font-size:2rem;color:var(--brand-primary)}
+.lead{color:var(--muted);margin-top:.5rem}
+.actions{margin-top:1rem;display:flex;gap:.8rem;flex-wrap:wrap}
+.hero-right .card{background:var(--surface);padding:1rem;border-radius:var(--radius);box-shadow:var(--shadow)}
+
+/* Cards */
+.cards-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin-top:1.25rem}
+.icon-card{background:linear-gradient(180deg, rgba(131,197,190,0.08), rgba(255,255,255,0.02));padding:1rem;border-radius:var(--radius);text-align:center;box-shadow:var(--shadow)}
+.icon{font-size:1.9rem;color:var(--brand-primary);margin-bottom:.5rem}
+
+/* Sections */
+.service-list{display:grid;gap:1rem;margin-top:1rem}
+.service-item, .product{background:var(--surface);padding:1rem;border-radius:var(--radius);box-shadow:var(--shadow)}
+.product-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem}
+.product img{height:120px;object-fit:contain;margin-bottom:.5rem}
+
+/* Auth */
+.auth-page{max-width:480px;margin:1.8rem auto;padding:1rem}
+.auth-card{background:var(--surface);padding:1.25rem;border-radius:var(--radius);box-shadow:var(--shadow)}
+label{display:block;margin-bottom:.25rem;font-weight:700;color:var(--brand-primary)}
+input,select,textarea{padding:.75rem;border-radius:10px;border:1px solid #d8eef0;width:100%;font-size:1rem}
+input:focus,select:focus,textarea:focus{outline:none;box-shadow:var(--focus-ring)}
+
+/* Footer */
+.site-footer{background:var(--brand-primary);color:#fff;padding:1.2rem;margin-top:2rem;font-size:.95rem;text-align:center}
+.site-footer a{color:#fff;text-decoration:underline}
+
+/* Forms small text */
+.small{font-size:.9rem;color:var(--muted)}
+
+/* FAQ */
+.faq-list{margin-top:1.5rem;display:grid;gap:1rem}
+.faq-item{overflow:hidden;border-radius:var(--radius);box-shadow:var(--shadow);background:var(--surface)}
+.faq-q{width:100%;text-align:left;background:var(--brand-primary);color:#fff;padding:1rem;border:none;cursor:pointer;font-weight:700}
+.faq-q:focus{outline:none;box-shadow:var(--focus-ring)}
+.faq-a{padding:1rem;background:#fff;border-top:1px solid #e6f0ef;}
+
+/* utilities */
+.center{text-align:center}
+.muted{color:var(--muted)}
+
+/* Responsive */
+@media (max-width:920px){.hero{grid-template-columns:1fr}.nav-list{display:none}}
+
+/* === Accessibility & Modern Design Enhancements (2025) === */
+
+/* Import modern clean font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+body {
+  font-family: "Inter", "Poppins", system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  letter-spacing: 0.01em;
+  background-color: #ffffff;
+  color: #1b1b1b;
+}
+
+/* Better section spacing */
+section {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* Round corners and smooth shadows */
+.card, .service-item, .product, .faq-item, .auth-card {
+  border-radius: 14px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover, .service-item:hover, .product:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+/* Buttons with smooth hover effect */
+.btn {
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+/* Text contrast adjustments */
+h1, h2, h3 {
+  font-weight: 600;
+  color: var(--brand-primary);
+  margin-bottom: .6rem;
+}
+p, li {
+  color: #1b1b1b;
+}
+
+/* Animation fade-in utility */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.fade-in {
+  animation: fadeIn 0.5s ease both;
+}
+
+/* Focus styles for keyboard accessibility */
+a:focus, button:focus, input:focus, select:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 183, 3, 0.4);
+}
+
+/* Ensure readable contrast on accent backgrounds */
+.btn.primary, .faq-q {
+  color: #fff;
+  background-color: var(--brand-primary);
+}
+.btn.primary:hover, .faq-q:hover {
+  background-color: #00535b;
+}

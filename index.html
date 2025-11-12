@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ClearJP</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Saltar al contenido principal</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-mini"><img src="assets/500x500_Logo clearjp.png" alt="Logo de ClearJP" class="logo">
+</a>
+      <div>
+        <div class="brand-name">ClearJP</div>
+        <div class="brand-tag muted">Limpieza profesional y con impacto social</div>
+      </div>
+      <nav aria-label="Navegación principal">
+        <ul class="nav-list">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="servicios.html">Servicios</a></li>
+          <li><a href="productos.html">Productos</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="login.html" class="btn outline small">Iniciar sesión</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+    <section class="hero">
+      <div class="hero-left">
+        <h1>Limpieza confiable, sostenible y con impacto social</h1>
+        <p class="lead">Reserva tu servicio en línea y recibe confirmación por WhatsApp o correo electrónico.</p>
+        <div class="actions">
+          <a href="#reservar" class="btn primary">Reservar ahora</a>
+          <a href="servicios.html" class="btn outline">Ver servicios</a>
+        </div>
+      </div>
+
+      <aside class="hero-right">
+        <div class="card auth-card" id="reservar">
+          <h3>Reserva rápida</h3>
+          <form id="quickBooking" novalidate>
+            <label for="q-name">Nombre completo</label>
+            <input id="q-name" type="text" required>
+
+            <label for="q-phone">Teléfono</label>
+            <input id="q-phone" type="tel" required>
+
+            <label for="q-service">Tipo de servicio</label>
+            <select id="q-service" required>
+              <option value="">Selecciona...</option>
+              <option value="puntual">Limpieza puntual</option>
+              <option value="recurrente">Limpieza recurrente</option>
+              <option value="profunda">Limpieza profunda</option>
+            </select>
+
+            <label for="q-date">Fecha preferida</label>
+            <input id="q-date" type="date">
+
+            <button type="submit" class="btn primary full">Enviar solicitud</button>
+            <p id="quickResult" class="small" aria-live="polite"></p>
+          </form>
+        </div>
+      </aside>
+    </section>
+
+    <section aria-label="Pasos para reservar">
+      <h2 class="center">Cómo reservar tu limpieza</h2>
+      <div class="cards-row">
+        <div class="icon-card">
+          <div class="icon">🧾</div>
+          <h3>1. Solicita tu cotización</h3>
+          <p>Completa el formulario o contáctanos directamente.</p>
+        </div>
+        <div class="icon-card">
+          <div class="icon">📅</div>
+          <h3>2. Agendamos la visita</h3>
+          <p>Confirmamos disponibilidad y alcance del servicio.</p>
+        </div>
+        <div class="icon-card">
+          <div class="icon">✅</div>
+          <h3>3. Confirmas y pagas</h3>
+          <p>Recibe la confirmación y paga por el método que prefieras.</p>
+        </div>
+        <div class="icon-card">
+          <div class="icon">🏠</div>
+          <h3>4. Disfruta tu limpieza</h3>
+          <p>Recibe tu servicio profesional y califícanos.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      © <span id="year"></span> ClearJP · <a href="mailto:clearjp@yahoo.com">clearjp@yahoo.com</a> · +57 304 346 0665
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>
