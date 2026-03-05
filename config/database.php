@@ -1,5 +1,7 @@
 <?php
 
+// configuro las conexiones y opciones de base de datos.
+
 use Illuminate\Support\Str;
 
 return [
@@ -10,9 +12,9 @@ return [
     |--------------------------------------------------------------------------
     |
     | Here you may specify which of the database connections below you wish
-    | to use as your default connection for database operations. This is
+    | to use your default connection for database operations. This is
     | the connection which will be utilized unless another connection
-    | is explicitly specified when you execute a query / statement.
+    | is explicitly specified when you execute query / statement.
     |
     */
 
@@ -137,8 +139,8 @@ return [
     |--------------------------------------------------------------------------
     |
     | Redis is an open source, fast, and advanced key-value store that also
-    | provides a richer body of commands than a typical key-value system
-    | such as Memcached. You may define your connection settings here.
+    | provides richer body of commands than typical key-value system
+    | such Memcached. You may define your connection settings here.
     |
     */
 

@@ -10,19 +10,19 @@ use Illuminate\Support\Facades\Hash;
 class AuthController extends Controller
 {
     /**
-     * Registro de usuario.
-     * Recibe: usuario (email) y password.
-     * Responde: mensaje de registro exitoso o errores de validacion.
+     * registro un usuario.
+     * recibo: usuario (email) y password.
+     * respondo: mensaje de registro exitoso o errores de validaci??n.
      */
     public function register(Request $request)
     {
-        // Validar datos de entrada
+        // valido los datos de entrada.
         $data = $request->validate([
             'usuario' => ['required', 'string', 'email', 'max:190'],
             'password' => ['required', 'string', 'min:6'],
         ]);
 
-        // Verificar si el usuario ya existe en la tabla usuarios
+        // verifico si el usuario ya existe en la tabla usuarios.
         $exists = DB::table('usuarios')
             ->where('email', $data['usuario'])
             ->exists();
@@ -34,7 +34,7 @@ class AuthController extends Controller
             ], 409);
         }
 
-        // Insertar nuevo usuario con password hasheado
+        // inserto el nuevo usuario con password hasheado.
         $id = DB::table('usuarios')->insertGetId([
             'email' => $data['usuario'],
             'password_hash' => Hash::make($data['password']),
@@ -50,24 +50,24 @@ class AuthController extends Controller
     }
 
     /**
-     * Inicio de sesion.
-     * Recibe: usuario (email) y password.
-     * Responde: autenticacion satisfactoria o error en la autenticacion.
+     * inicio sesi??n.
+     * recibo: usuario (email) y password.
+     * respondo: autenticaci??n satisfactoria o error en la autenticaci??n.
      */
     public function login(Request $request)
     {
-        // Validar datos de entrada
+        // valido los datos de entrada.
         $data = $request->validate([
             'usuario' => ['required', 'string', 'email'],
             'password' => ['required', 'string'],
         ]);
 
-        // Buscar usuario por email
+        // busco el usuario por email.
         $user = DB::table('usuarios')
             ->where('email', $data['usuario'])
             ->first();
 
-        // Si no existe o la clave no coincide, devolver error de autenticacion
+        // devuelvo error si no existe o la clave no coincide.
         if (!$user || !Hash::check($data['password'], $user->password_hash)) {
             return response()->json([
                 'ok' => false,
@@ -75,7 +75,7 @@ class AuthController extends Controller
             ], 401);
         }
 
-        // Autenticacion correcta
+        // confirmo la autenticación correcta.
         return response()->json([
             'ok' => true,
             'mensaje' => 'Autenticación satisfactoria',

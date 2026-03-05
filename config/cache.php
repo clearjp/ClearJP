@@ -1,5 +1,7 @@
 <?php
 
+// configuro el sistema de caché.
+
 use Illuminate\Support\Str;
 
 return [
@@ -11,7 +13,7 @@ return [
     |
     | This option controls the default cache store that will be used by the
     | framework. This connection is utilized if another isn't explicitly
-    | specified when running a cache operation inside the application.
+    | specified when running cache operation inside the application.
     |
     */
 
@@ -22,8 +24,7 @@ return [
     | Cache Stores
     |--------------------------------------------------------------------------
     |
-    | Here you may define all of the cache "stores" for your application as
-    | well as their drivers. You may even define multiple stores for the
+    | Here you may define all of the cache "stores" for your application | well their drivers. You may even define multiple stores for the
     | same cache driver to group types of items stored in your caches.
     |
     | Supported drivers: "array", "database", "file", "memcached",

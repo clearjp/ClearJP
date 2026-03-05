@@ -14,7 +14,7 @@
     .hero-content p { font-size: 1rem; color: #666; margin-bottom: 30px; }
     .hero-buttons { display: flex; gap: 15px; }
 
-    /* Formulario Flotante */
+    /* estilo el formulario flotante. */
     .booking-card {
         flex: 0 0 350px; background: #ffffff; padding: 25px;
         border-radius: 10px; box-shadow: 0 5px 20px rgba(0,0,0,0.1);
@@ -39,7 +39,7 @@
     .step-item { flex: 1; min-width: 200px; text-align: center; }
     .icon-box { font-size: 2.5rem; margin-bottom: 15px; height: 50px; }
     
-    /* Colores iconos */
+    /* asigno colores los iconos. */
     .fa-file-alt { color: var(--secondary-color); } /* ajusto los colores para que combinen con tu paleta */
     .fa-calendar-alt { color: var(--primary-color); }
     .fa-check-square { color: var(--secondary-color); }
@@ -49,13 +49,14 @@
     .step-item p { font-size: 0.85rem; color: #666; line-height: 1.5; padding: 0 10px; }
 </style>
 
+{{-- muestro la sección hero con reserva rápida. --}}
 <section class="hero">
     <div class="hero-content">
         <h2>Limpieza confiable, sostenible y con impacto social</h2>
         <p>Reserva tu servicio en línea y recibe confirmación por WhatsApp o correo electrónico.</p>
         <div class="hero-buttons">
             <button class="btn-primary" onclick="document.getElementById('nombre').focus()">Reservar ahora</button>
-            <a href="{{ url('/servicios') }}" class="btn-secondary" style="display:inline-block; text-align:center;">Ver servicios</a>
+            <href="{{ url('/servicios') }}" class="btn-secondary" style="display:inline-block; text-align:center;">Ver servicios</>
         </div>
     </div>
 
@@ -87,6 +88,7 @@
     </div>
 </section>
 
+{{-- explico los pasos para reservar. --}}
 <section class="steps-section">
     <h2>Cómo reservar tu limpieza</h2>
     <div class="steps-container">

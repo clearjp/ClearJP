@@ -2,6 +2,7 @@
 
 @section('content')
 <style>
+    /* aplico estilos específicos para productos. */
     .banner-productos {
         background-color: var(--primary-color);
         color: var(--white);
@@ -25,7 +26,7 @@
         padding: 20px;
         display: flex;
         flex-direction: column;
-        justify-content: space-between; /* Yo aseguro que el botón siempre quede al final */
+        justify-content: space-between; /* aseguro que el botón siempre quede al final */
     }
     .producto-card:hover {
         transform: translateY(-5px);
@@ -44,7 +45,7 @@
         font-size: 0.8rem;
         font-weight: bold;
     }
-    /* Yo añado un estilo para el botón que sea consistente con tu app.blade.php */
+    /* añado un estilo para el botón que sea consistente con tu app.blade.php */
     .btn-detalle {
         background: var(--primary-color);
         color: var(--white);
@@ -61,11 +62,13 @@
     }
 </style>
 
+{{-- presento el banner de productos. --}}
 <section class="banner-productos">
     <h1>Catálogo de Productos</h1>
     <p>Insumos certificados para una desinfección total y segura.</p>
 </section>
 
+{{-- dispongo las tarjetas de productos en grilla. --}}
 <div class="productos-container">
     <div class="producto-card">
         <div>

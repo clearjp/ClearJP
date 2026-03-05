@@ -1,5 +1,6 @@
-// auth.js - basic validation for login & register (client-side only for demo)
+// valido de forma básica el login y el registro (solo cliente, modo demo).
 document.addEventListener('DOMContentLoaded', function(){
+  // manejo el formulario de inicio de sesión.
   const loginForm = document.getElementById('loginForm');
   if(loginForm){
     loginForm.addEventListener('submit', function(e){
@@ -12,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function(){
         msg.style.color = '#b00020';
         return;
       }
-      // simple email format check
+      // hago una validación simple de formato de email.
       const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       if(!re.test(email)){
         msg.textContent = 'Ingresa un correo válido.';
@@ -25,6 +26,7 @@ document.addEventListener('DOMContentLoaded', function(){
     });
   }
 
+  // manejo el formulario de registro.
   const regForm = document.getElementById('registerForm');
   if(regForm){
     regForm.addEventListener('submit', function(e){

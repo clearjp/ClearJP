@@ -1,6 +1,6 @@
 {
     "_readme": [
-        "This file locks the dependencies of your project to a known state",
+        "This file locks the dependencies of your project to known state",
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
@@ -196,7 +196,7 @@
                     "homepage": "https://www.colinodell.com"
                 }
             ],
-            "description": "Given a deep data structure, access data by dot notation.",
+            "description": "Given deep data structure, access data by dot notation.",
             "homepage": "https://github.com/dflydev/dflydev-dot-access-data",
             "keywords": [
                 "access",
@@ -266,7 +266,7 @@
                     "email": "schmittjoh@gmail.com"
                 }
             ],
-            "description": "PHP Doctrine Inflector is a small library that can perform string manipulations with regard to upper/lowercase and singular/plural forms of words.",
+            "description": "PHP Doctrine Inflector is small library that can perform string manipulations with regard to upper/lowercase and singular/plural forms of words.",
             "homepage": "https://www.doctrine-project.org/projects/inflector.html",
             "keywords": [
                 "inflection",
@@ -424,7 +424,7 @@
                     "homepage": "https://github.com/dragonmantank"
                 }
             ],
-            "description": "CRON for PHP: Calculate the next or previous run date and determine if a CRON expression is due",
+            "description": "CRON for PHP: Calculate the next or previous run date and determine if CRON expression is due",
             "keywords": [
                 "cron",
                 "schedule"
@@ -487,7 +487,7 @@
                     "name": "Eduardo Gulias Davis"
                 }
             ],
-            "description": "A library for validating emails against several RFCs",
+            "description": "library for validating emails against several RFCs",
             "homepage": "https://github.com/egulias/EmailValidator",
             "keywords": [
                 "email",
@@ -735,7 +735,7 @@
                     "homepage": "https://github.com/Tobion"
                 }
             ],
-            "description": "Guzzle is a PHP HTTP client library",
+            "description": "Guzzle is PHP HTTP client library",
             "keywords": [
                 "client",
                 "curl",
@@ -1027,7 +1027,7 @@
                     "homepage": "https://github.com/Nyholm"
                 }
             ],
-            "description": "A polyfill class for uri_template of PHP",
+            "description": "polyfill class for uri_template of PHP",
             "keywords": [
                 "guzzlehttp",
                 "uri-template"
@@ -1213,7 +1213,7 @@
                 "php-http/discovery": "Required to use PSR-7 bridging features (^1.15).",
                 "phpunit/phpunit": "Required to use assertions and run tests (^10.5.35|^11.5.3|^12.0.1).",
                 "predis/predis": "Required to use the predis connector (^2.3|^3.0).",
-                "psr/http-message": "Required to allow Storage::put to accept a StreamInterface (^1.0).",
+                "psr/http-message": "Required to allow Storage::put to accept StreamInterface (^1.0).",
                 "pusher/pusher-php-server": "Required to use the Pusher broadcast driver (^6.0|^7.0).",
                 "resend/resend-php": "Required to enable support for the Resend mail transport (^0.10.0|^1.0).",
                 "symfony/cache": "Required to PSR-6 cache bridge (^7.2).",
@@ -2060,16 +2060,16 @@
             },
             "suggest": {
                 "aws/aws-sdk-php": "Allow sending log messages to AWS services like DynamoDB",
-                "doctrine/couchdb": "Allow sending log messages to a CouchDB server",
+                "doctrine/couchdb": "Allow sending log messages to CouchDB server",
                 "elasticsearch/elasticsearch": "Allow sending log messages to an Elasticsearch server via official client",
                 "ext-amqp": "Allow sending log messages to an AMQP server (1.0+ required)",
                 "ext-curl": "Required to send log messages using the IFTTTHandler, the LogglyHandler, the SendGridHandler, the SlackWebhookHandler or the TelegramBotHandler",
                 "ext-mbstring": "Allow to work properly with unicode symbols",
-                "ext-mongodb": "Allow sending log messages to a MongoDB server (via driver)",
+                "ext-mongodb": "Allow sending log messages to MongoDB server (via driver)",
                 "ext-openssl": "Required to send log messages using SSL",
-                "ext-sockets": "Allow sending log messages to a Syslog server (via UDP driver)",
-                "graylog2/gelf-php": "Allow sending log messages to a GrayLog2 server",
-                "mongodb/mongodb": "Allow sending log messages to a MongoDB server (via library)",
+                "ext-sockets": "Allow sending log messages to Syslog server (via UDP driver)",
+                "graylog2/gelf-php": "Allow sending log messages to GrayLog2 server",
+                "mongodb/mongodb": "Allow sending log messages to MongoDB server (via library)",
                 "php-amqplib/php-amqplib": "Allow sending log messages to an AMQP server using php-amqplib",
                 "rollbar/rollbar": "Allow sending log messages to Rollbar",
                 "ruflin/elastica": "Allow sending log messages to an Elastic Search server"
@@ -2277,7 +2277,7 @@
                     "homepage": "https://nette.org/contributors"
                 }
             ],
-            "description": "📐 Nette Schema: validating data structures against a given Schema.",
+            "description": "📐 Nette Schema: validating data structures against given Schema.",
             "homepage": "https://nette.org",
             "keywords": [
                 "config",
@@ -2425,7 +2425,7 @@
                     "name": "Nikita Popov"
                 }
             ],
-            "description": "A PHP parser written in PHP",
+            "description": "PHP parser written in PHP",
             "keywords": [
                 "parser",
                 "php"
@@ -3041,8 +3041,8 @@
             },
             "suggest": {
                 "composer/class-map-generator": "Improved tab completion performance with better class discovery.",
-                "ext-pcntl": "Enabling the PCNTL extension makes PsySH a lot happier :)",
-                "ext-posix": "If you have PCNTL, you'll want the POSIX extension as well."
+                "ext-pcntl": "Enabling the PCNTL extension makes PsySH lot happier :)",
+                "ext-posix": "If you have PCNTL, you'll want the POSIX extension well."
             },
             "bin": [
                 "bin/psysh"
@@ -3126,7 +3126,7 @@
                     "email": "ralph.khattar@gmail.com"
                 }
             ],
-            "description": "A polyfill for getallheaders.",
+            "description": "polyfill for getallheaders.",
             "support": {
                 "issues": "https://github.com/ralouphie/getallheaders/issues",
                 "source": "https://github.com/ralouphie/getallheaders/tree/develop"
@@ -3194,7 +3194,7 @@
                     "homepage": "https://benramsey.com"
                 }
             ],
-            "description": "A PHP library for representing and manipulating collections.",
+            "description": "PHP library for representing and manipulating collections.",
             "keywords": [
                 "array",
                 "collection",
@@ -3255,7 +3255,7 @@
                 "ext-gmp": "Enables faster math with arbitrary-precision integers using GMP.",
                 "ext-uuid": "Enables the use of PeclUuidTimeGenerator and PeclUuidRandomGenerator.",
                 "paragonie/random-lib": "Provides RandomLib for use with the RandomLibAdapter",
-                "ramsey/uuid-doctrine": "Allows the use of Ramsey\\Uuid\\Uuid as Doctrine field type."
+                "ramsey/uuid-doctrine": "Allows the use of Ramsey\\Uuid\\Uuid Doctrine field type."
             },
             "type": "library",
             "extra": {
@@ -3275,7 +3275,7 @@
             "license": [
                 "MIT"
             ],
-            "description": "A PHP library for generating and working with universally unique identifiers (UUIDs).",
+            "description": "PHP library for generating and working with universally unique identifiers (UUIDs).",
             "keywords": [
                 "guid",
                 "identifier",
@@ -3574,7 +3574,7 @@
                     "homepage": "https://symfony.com/contributors"
                 }
             ],
-            "description": "A generic function and convention to trigger deprecation notices",
+            "description": "generic function and convention to trigger deprecation notices",
             "homepage": "https://symfony.com",
             "support": {
                 "source": "https://github.com/symfony/deprecation-contracts/tree/v3.6.0"
@@ -4080,7 +4080,7 @@
                     "homepage": "https://symfony.com/contributors"
                 }
             ],
-            "description": "Provides a structured process for converting a Request into a Response",
+            "description": "Provides structured process for converting Request into Response",
             "homepage": "https://symfony.com",
             "support": {
                 "source": "https://github.com/symfony/http-kernel/tree/v7.3.7"
@@ -5225,7 +5225,7 @@
                     "homepage": "https://symfony.com/contributors"
                 }
             ],
-            "description": "Maps an HTTP request to a set of configuration variables",
+            "description": "Maps an HTTP request to set of configuration variables",
             "homepage": "https://symfony.com",
             "keywords": [
                 "router",
@@ -5400,7 +5400,7 @@
                     "homepage": "https://symfony.com/contributors"
                 }
             ],
-            "description": "Provides an object-oriented API to strings and deals with bytes, UTF-8 code points and grapheme clusters in a unified way",
+            "description": "Provides an object-oriented API to strings and deals with bytes, UTF-8 code points and grapheme clusters in unified way",
             "homepage": "https://symfony.com",
             "keywords": [
                 "grapheme",
@@ -5823,7 +5823,7 @@
                     "role": "Developer"
                 }
             ],
-            "description": "CssToInlineStyles is a class that enables you to convert HTML-pages/files into HTML-pages/files with inline styles. This is very useful when you're sending emails.",
+            "description": "CssToInlineStyles is class that enables you to convert HTML-pages/files into HTML-pages/files with inline styles. This is very useful when you're sending emails.",
             "homepage": "https://github.com/tijsverkoyen/CssToInlineStyles",
             "support": {
                 "issues": "https://github.com/tijsverkoyen/CssToInlineStyles/issues",
@@ -6124,7 +6124,7 @@
             "license": [
                 "MIT"
             ],
-            "description": "A small layer on top of trigger_error(E_USER_DEPRECATED) or PSR-3 logging with options to disable all deprecations or selectively for packages.",
+            "description": "small layer on top of trigger_error(E_USER_DEPRECATED) or PSR-3 logging with options to disable all deprecations or selectively for packages.",
             "homepage": "https://www.doctrine-project.org/",
             "support": {
                 "issues": "https://github.com/doctrine/deprecations/issues",
@@ -6183,7 +6183,7 @@
                     "name": "François Zaninotto"
                 }
             ],
-            "description": "Faker is a PHP library that generates fake data for you.",
+            "description": "Faker is PHP library that generates fake data for you.",
             "keywords": [
                 "data",
                 "faker",
@@ -6281,7 +6281,7 @@
             },
             "suggest": {
                 "symfony/var-dumper": "Pretty print complex values better with var-dumper available",
-                "whoops/soap": "Formats errors as SOAP responses"
+                "whoops/soap": "Formats errors SOAP responses"
             },
             "type": "library",
             "extra": {
@@ -6425,7 +6425,7 @@
                     "email": "alessandro.lai85@gmail.com"
                 }
             ],
-            "description": "A library to get pretty versions strings of installed dependencies",
+            "description": "library to get pretty versions strings of installed dependencies",
             "keywords": [
                 "composer",
                 "package",
@@ -6635,7 +6635,7 @@
                     "email": "taylor@laravel.com"
                 }
             ],
-            "description": "Docker files for running a basic Laravel application.",
+            "description": "Docker files for running basic Laravel application.",
             "keywords": [
                 "docker",
                 "laravel"
@@ -6706,7 +6706,7 @@
                     "role": "Lead Developer"
                 }
             ],
-            "description": "Mockery is a simple yet flexible PHP mock object framework",
+            "description": "Mockery is simple yet flexible PHP mock object framework",
             "homepage": "https://github.com/mockery/mockery",
             "keywords": [
                 "BDD",
@@ -7404,7 +7404,7 @@
                     "role": "Developer"
                 }
             ],
-            "description": "Component for reading phar.io manifest information from a PHP Archive (PHAR)",
+            "description": "Component for reading phar.io manifest information from PHP Archive (PHAR)",
             "support": {
                 "issues": "https://github.com/phar-io/manifest/issues",
                 "source": "https://github.com/phar-io/manifest/tree/2.0.4"
@@ -7578,7 +7578,7 @@
                     "email": "opensource@ijaap.nl"
                 }
             ],
-            "description": "With this component, a library can provide support for annotations via DocBlocks or otherwise retrieve information that is embedded in a DocBlock.",
+            "description": "With this component, library can provide support for annotations via DocBlocks or otherwise retrieve information that is embedded in DocBlock.",
             "support": {
                 "issues": "https://github.com/phpDocumentor/ReflectionDocBlock/issues",
                 "source": "https://github.com/phpDocumentor/ReflectionDocBlock/tree/5.6.4"
@@ -7636,7 +7636,7 @@
                     "email": "me@mikevanriel.com"
                 }
             ],
-            "description": "A PSR-5 based resolver of Class names, Types and Structural Element Names",
+            "description": "PSR-5 based resolver of Class names, Types and Structural Element Names",
             "support": {
                 "issues": "https://github.com/phpDocumentor/TypeResolver/issues",
                 "source": "https://github.com/phpDocumentor/TypeResolver/tree/1.12.0"
@@ -7723,7 +7723,7 @@
             },
             "suggest": {
                 "ext-pcov": "PHP extension that provides line coverage",
-                "ext-xdebug": "PHP extension that provides line coverage as well as branch and path coverage"
+                "ext-xdebug": "PHP extension that provides line coverage well branch and path coverage"
             },
             "type": "library",
             "extra": {
@@ -7821,7 +7821,7 @@
                     "role": "lead"
                 }
             ],
-            "description": "FilterIterator implementation that filters files based on a list of suffixes.",
+            "description": "FilterIterator implementation that filters files based on list of suffixes.",
             "homepage": "https://github.com/sebastianbergmann/php-file-iterator/",
             "keywords": [
                 "filesystem",
@@ -7886,7 +7886,7 @@
                     "role": "lead"
                 }
             ],
-            "description": "Invoke callables with a timeout",
+            "description": "Invoke callables with timeout",
             "homepage": "https://github.com/sebastianbergmann/php-invoker/",
             "keywords": [
                 "process"
@@ -9062,7 +9062,7 @@
             "license": [
                 "MIT"
             ],
-            "description": "A static analysis tool to detect side effects in PHP code",
+            "description": "static analysis tool to detect side effects in PHP code",
             "keywords": [
                 "static analysis"
             ],
@@ -9250,7 +9250,7 @@
                     "role": "Developer"
                 }
             ],
-            "description": "A small library for converting tokenized PHP source code into XML and potentially other formats",
+            "description": "small library for converting tokenized PHP source code into XML and potentially other formats",
             "support": {
                 "issues": "https://github.com/theseer/tokenizer/issues",
                 "source": "https://github.com/theseer/tokenizer/tree/1.3.1"

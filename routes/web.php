@@ -1,27 +1,27 @@
 <?php
 use Illuminate\Support\Facades\Route;
 
-// Pagina de inicio (welcome.blade.php)
+// sirvo la página de inicio (welcome.blade.php).
 Route::get('/', function () {
     return view('welcome');
 });
 
-// Formulario unificado de inicio de sesion / registro
+// sirvo el formulario unificado de inicio de sesión y registro.
 Route::get('/login', function () {
     return view('login');
 });
 
-// Ruta para Servicios.blade.php
+// sirvo la vista de servicios.
 Route::get('/servicios', function () {
     return view('servicios');
 });
 
-// Ruta para Productos.blade.php
+// sirvo la vista de productos.
 Route::get('/productos', function () {
     return view('productos');
 });
 
-// Ruta para Faq.blade.php
+// sirvo la vista de preguntas frecuentes.
 Route::get('/faq', function () {
     return view('faq');
 });

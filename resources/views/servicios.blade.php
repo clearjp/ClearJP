@@ -2,7 +2,7 @@
 
 @section('content')
 <style>
-    /* Estilos específicos para la página de servicios */
+    /* aplico estilos específicos para la página de servicios. */
     .hero-servicios {
         background-color: var(--primary-color);
         color: var(--white);
@@ -21,7 +21,7 @@
         padding: 30px;
         box-shadow: 0 4px 15px rgba(0,0,0,0.05);
         border-radius: 8px;
-        transition: transform 0.3s ease; /* Yo añado esto para que se mueva suave al pasar el mouse */
+        transition: transform 0.3s ease; /* añado esto para que se mueva suave al pasar el mouse */
     }
 
     .card-servicio:hover {
@@ -42,11 +42,13 @@
     }
 </style>
 
+{{-- destaco el encabezado de servicios. --}}
 <section class="hero-servicios">
     <h1>Nuestros Servicios</h1>
     <p>Soluciones frescas y profesionales con el mejor impacto.</p>
 </section>
 
+{{-- organizo la grilla de servicios. --}}
 <div class="servicios-grid">
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
         
@@ -62,7 +64,7 @@
 
         <div class="card-servicio">
             <span class="text-highlight">Limpieza Residencial</span>
-            <p>Llevamos la calidad profesional a tu hogar. Limpieza profunda de alfombras, vidrios y áreas difíciles.</p>
+            <p>Llevamos la calidad profesional tu hogar. Limpieza profunda de alfombras, vidrios y áreas difíciles.</p>
         </div>
 
     </div>

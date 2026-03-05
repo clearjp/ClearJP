@@ -2,27 +2,24 @@
 
 /*
 |--------------------------------------------------------------------------
-| Test Case
+| configuro el caso base de pruebas
 |--------------------------------------------------------------------------
 |
-| The closure you provide to your test functions is always bound to a specific PHPUnit test
-| case class. By default, that class is "PHPUnit\Framework\TestCase". Of course, you may
-| need to change it using the "pest()" function to bind a different classes or traits.
+| indico que los closures de tests se vinculan una clase de PHPUnit.
+| Por defecto uso "PHPUnit\Framework\TestCase", y puedo cambiarlo con "pest()".
 |
 */
 
 pest()->extend(Tests\TestCase::class)
- // ->use(Illuminate\Foundation\Testing\RefreshDatabase::class)
+ // puedo habilitar RefreshDatabase si lo necesito.
     ->in('Feature');
 
 /*
 |--------------------------------------------------------------------------
-| Expectations
+| defino expectativas
 |--------------------------------------------------------------------------
 |
-| When you're writing tests, you often need to check that values meet certain conditions. The
-| "expect()" function gives you access to a set of "expectations" methods that you can use
-| to assert different things. Of course, you may extend the Expectation API at any time.
+| uso "expect()" para validar condiciones y puedo extender su API cuando lo necesite.
 |
 */
 
@@ -32,16 +29,14 @@ expect()->extend('toBeOne', function () {
 
 /*
 |--------------------------------------------------------------------------
-| Functions
+| defino funciones auxiliares
 |--------------------------------------------------------------------------
 |
-| While Pest is very powerful out-of-the-box, you may have some testing code specific to your
-| project that you don't want to repeat in every file. Here you can also expose helpers as
-| global functions to help you to reduce the number of lines of code in your test files.
+| expongo helpers globales para no repetir c??digo de pruebas.
 |
 */
 
 function something()
 {
-    // ..
+    // puedo añadir lógica de apoyo aquí.
 }

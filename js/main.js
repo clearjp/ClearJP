@@ -1,10 +1,10 @@
-// main.js - shared interactions
+// centralizo las interacciones compartidas del sitio.
 document.addEventListener('DOMContentLoaded', function(){
-  // year
+  // actualizo el año del footer.
   const yearEl = document.getElementById('year');
   if(yearEl) yearEl.textContent = new Date().getFullYear();
 
-  // FAQ accordion accessible
+  // habilito el acordeón de FAQ con accesibilidad.
   document.querySelectorAll('.faq-q').forEach(btn => {
     btn.addEventListener('click', () => {
       const expanded = btn.getAttribute('aria-expanded') === 'true';
@@ -12,13 +12,13 @@ document.addEventListener('DOMContentLoaded', function(){
       const panel = btn.nextElementSibling;
       if(panel) panel.hidden = expanded;
     });
-    // keyboard support
+    // agrego soporte de teclado.
     btn.addEventListener('keydown', (e) => {
       if(e.key === 'Enter' || e.key === ' ') btn.click();
     });
   });
 
-  // Quick booking feedback
+  // valido y doy feedback de la reserva rápida.
   const bookingForm = document.getElementById('quickBooking');
   if(bookingForm){
     bookingForm.addEventListener('submit', (e)=>{

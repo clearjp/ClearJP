@@ -2,11 +2,11 @@
 @extends('layouts.app')
 
 @section('content')
-<!-- Tarjeta de acceso centrada con Tailwind y colores del sitio -->
+<!-- centro la tarjeta de acceso con estilos del sitio. -->
 <div class="min-h-[70vh] flex items-center justify-center"
      style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
     <div class="w-full max-w-md bg-white border border-[#e5e7eb] rounded-2xl shadow-[0_12px_30px_rgba(0,0,0,0.10)] p-6">
-        <!-- Tabs superiores (solo visuales) -->
+        <!-- muestro pestañas superiores (solo visuales). -->
         <div class="bg-[#f2f6f6] rounded-xl p-1.5 flex gap-1.5">
             <button id="tab-login" type="button" class="flex-1 text-center py-2 rounded-lg bg-white text-[#006d77] font-semibold shadow-sm">
                 Iniciar sesión
@@ -19,11 +19,11 @@
         <h2 id="form-title" class="mt-4 text-[#006d77] text-xl font-bold">Bienvenido</h2>
         <p id="form-subtitle" class="text-[#555] text-sm mt-1">Ingresa con tu cuenta</p>
 
-        <!-- Formulario de login -->
+        <!-- presento el formulario de login. -->
         <form id="login-form" class="mt-4">
             <label class="block text-sm font-semibold text-[#006d77] mb-1">Usuario</label>
             <div class="flex items-center gap-2 bg-[#f9f9f9] border border-[#e5e7eb] rounded-xl px-3 py-2 focus-within:border-[#006d77] focus-within:ring-4 focus-within:ring-[#83c5be]/30 transition">
-                <!-- Icono usuario -->
+                <!-- muestro el icono de usuario. -->
                 <svg class="w-5 h-5 text-[#83c5be]" viewBox="0 0 24 24" fill="none">
                     <path d="M20 21a8 8 0 1 0-16 0" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
                     <circle cx="12" cy="7" r="4" stroke="currentColor" stroke-width="1.7"/>
@@ -33,7 +33,7 @@
 
             <label class="block text-sm font-semibold text-[#006d77] mb-1 mt-4">Contraseña</label>
             <div class="flex items-center gap-2 bg-[#f9f9f9] border border-[#e5e7eb] rounded-xl px-3 py-2 focus-within:border-[#006d77] focus-within:ring-4 focus-within:ring-[#83c5be]/30 transition">
-                <!-- Icono candado -->
+                <!-- muestro el icono de candado. -->
                 <svg class="w-5 h-5 text-[#83c5be]" viewBox="0 0 24 24" fill="none">
                     <rect x="5" y="10" width="14" height="10" rx="2" stroke="currentColor" stroke-width="1.7"/>
                     <path d="M8 10V7a4 4 0 0 1 8 0v3" stroke="currentColor" stroke-width="1.7"/>
@@ -45,12 +45,12 @@
                 Ingresar
             </button>
 
-            <a href="#" class="block mt-3 text-center text-[0.95rem] text-[#006d77] hover:underline">
+            <href="#" class="block mt-3 text-center text-[0.95rem] text-[#006d77] hover:underline">
                 ¿Olvidaste tu contraseña?
-            </a>
+            </>
         </form>
 
-        <!-- Formulario de registro -->
+        <!-- presento el formulario de registro. -->
         <form id="register-form" class="mt-4 hidden">
             <label class="block text-sm font-semibold text-[#006d77] mb-1">Usuario</label>
             <div class="flex items-center gap-2 bg-[#f9f9f9] border border-[#e5e7eb] rounded-xl px-3 py-2 focus-within:border-[#006d77] focus-within:ring-4 focus-within:ring-[#83c5be]/30 transition">
@@ -79,6 +79,7 @@
     </div>
 </div>
 
+{{-- manejo la lógica de pestañas y llamadas al API. --}}
 <script>
     const API_BASE_URL = '{{ url('/api') }}';
 
@@ -90,6 +91,7 @@
     const formTitle = document.getElementById('form-title');
     const formSubtitle = document.getElementById('form-subtitle');
 
+    // alterno el estado visual entre login y registro.
     function setActiveTab(isLogin) {
         loginForm.classList.toggle('hidden', !isLogin);
         registerForm.classList.toggle('hidden', isLogin);
@@ -116,7 +118,7 @@
     loginForm.addEventListener('submit', async (e) => {
         e.preventDefault();
 
-        // Construir el payload del login
+        // construyo el payload del login.
         const payload = {
             usuario: document.getElementById('login-usuario').value,
             password: document.getElementById('login-password').value,
@@ -131,11 +133,11 @@
 
             const data = await response.json();
 
-            // Mostrar el mensaje que retorna la API
+            // muestro el mensaje que retorna la API.
             formMessage.textContent = data.mensaje || 'Respuesta recibida';
             formMessage.style.color = response.ok ? '#0f766e' : '#b91c1c';
         } catch (error) {
-            // Mostrar error de red
+            // muestro el error de red.
             formMessage.textContent = 'Error de red al intentar iniciar sesión';
             formMessage.style.color = '#b91c1c';
         }
@@ -144,6 +146,7 @@
     registerForm.addEventListener('submit', async (e) => {
         e.preventDefault();
 
+        // construyo el payload del registro.
         const payload = {
             usuario: document.getElementById('register-usuario').value,
             password: document.getElementById('register-password').value,

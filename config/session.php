@@ -1,5 +1,7 @@
 <?php
 
+// configuro las sesiones de usuario.
+
 use Illuminate\Support\Str;
 
 return [
@@ -10,8 +12,8 @@ return [
     |--------------------------------------------------------------------------
     |
     | This option determines the default session driver that is utilized for
-    | incoming requests. Laravel supports a variety of storage options to
-    | persist session data. Database storage is a great default choice.
+    | incoming requests. Laravel supports variety of storage options to
+    | persist session data. Database storage is great default choice.
     |
     | Supported: "file", "cookie", "database", "memcached",
     |            "redis", "dynamodb", "array"
@@ -67,9 +69,8 @@ return [
     | Session Database Connection
     |--------------------------------------------------------------------------
     |
-    | When using the "database" or "redis" session drivers, you may specify a
-    | connection that should be used to manage these sessions. This should
-    | correspond to a connection in your database configuration options.
+    | When using the "database" or "redis" session drivers, you may specify | connection that should be used to manage these sessions. This should
+    | correspond to connection in your database configuration options.
     |
     */
 
@@ -81,7 +82,7 @@ return [
     |--------------------------------------------------------------------------
     |
     | When using the "database" session driver, you may specify the table to
-    | be used to store sessions. Of course, a sensible default is defined
+    | be used to store sessions. Of course, sensible default is defined
     | for you; however, you're welcome to change this to another table.
     |
     */
@@ -110,7 +111,7 @@ return [
     |
     | Some session drivers must manually sweep their storage location to get
     | rid of old sessions from storage. Here are the chances that it will
-    | happen on a given request. By default, the odds are 2 out of 100.
+    | happen on given request. By default, the odds are 2 out of 100.
     |
     */
 
@@ -123,7 +124,7 @@ return [
     |
     | Here you may change the name of the session cookie that is created by
     | the framework. Typically, you should not need to change this value
-    | since doing so does not grant a meaningful security improvement.
+    | since doing so does not grant meaningful security improvement.
     |
     */
 
@@ -138,7 +139,7 @@ return [
     |--------------------------------------------------------------------------
     |
     | The session cookie path determines the path for which the cookie will
-    | be regarded as available. Typically, this will be the root path of
+    | be regarded available. Typically, this will be the root path of
     | your application, but you're free to change this when necessary.
     |
     */
@@ -164,7 +165,7 @@ return [
     |--------------------------------------------------------------------------
     |
     | By setting this option to true, session cookies will only be sent back
-    | to the server if the browser has a HTTPS connection. This will keep
+    | to the server if the browser has HTTPS connection. This will keep
     | the cookie from being sent to you when it can't be done securely.
     |
     */
@@ -207,7 +208,7 @@ return [
     |--------------------------------------------------------------------------
     |
     | Setting this value to true will tie the cookie to the top-level site for
-    | a cross-site context. Partitioned cookies are accepted by the browser
+    | cross-site context. Partitioned cookies are accepted by the browser
     | when flagged "secure" and the Same-Site attribute is set to "none".
     |
     */
