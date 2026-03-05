@@ -1,5 +1,5 @@
 <style>
-    /* estilo el pie de página. */
+    /* estilo el pie de p?gina. */
     footer {
         background-color: var(--primary-color);
         color: var(--white);
@@ -16,7 +16,7 @@
 <footer>
     <p>
         © 2025 ClearJP · 
-        <href="mailto:clearjp@yahoo.com">c l e r j p @yahoo.com</> · 
+        <a href="mailto:clearjp@yahoo.com">c l e r j p @yahoo.com</a> · 
         +57 304 346 0665
     </p>
 </footer>

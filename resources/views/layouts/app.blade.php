@@ -10,7 +10,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     
     <style>
-        /* defino variables y un reset básico. */
+        /* defino variables y un reset b?sico. */
         :root {
             --primary-color: #006d77;
             --secondary-color: #83c5be;
@@ -36,7 +36,7 @@
         main { flex: 1; }
 
         /* defino estilos globales para botones. */
-        /* defino estos aquÃ­ para no tener que repetirlos en Servicios ni en Productos */
+        /* defino estos aqu? para no tener que repetirlos en Servicios ni en Productos */
         .btn-login {
             border: 1px solid var(--primary-color); padding: 8px 20px; border-radius: 20px;
             color: var(--primary-color); font-weight: 600; transition: 0.3s;

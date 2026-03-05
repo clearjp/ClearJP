@@ -1,27 +1,28 @@
 <?php
+
 use Illuminate\Support\Facades\Route;
 
-// sirvo la página de inicio (welcome.blade.php).
-Route::get('/', function () {
-    return view('welcome');
-});
+/*
+|--------------------------------------------------------------------------
+| Web Routes
+|--------------------------------------------------------------------------
+| Blade pages
+*/
+Route::view('/', 'welcome')->name('home');
+Route::view('/servicios', 'servicios')->name('servicios');
+Route::view('/productos', 'productos')->name('productos');
+Route::view('/faq', 'faq')->name('faq');
+Route::view('/login', 'login')->name('login');
 
-// sirvo el formulario unificado de inicio de sesión y registro.
-Route::get('/login', function () {
-    return view('login');
-});
-
-// sirvo la vista de servicios.
-Route::get('/servicios', function () {
-    return view('servicios');
-});
-
-// sirvo la vista de productos.
-Route::get('/productos', function () {
-    return view('productos');
-});
-
-// sirvo la vista de preguntas frecuentes.
-Route::get('/faq', function () {
-    return view('faq');
-});
+/*
+|--------------------------------------------------------------------------
+| Legacy static URLs (.html)
+|--------------------------------------------------------------------------
+| Permanent redirects so old links keep working.
+*/
+Route::redirect('/index.html', '/', 301);
+Route::redirect('/servicios.html', '/servicios', 301);
+Route::redirect('/productos.html', '/productos', 301);
+Route::redirect('/faq.html', '/faq', 301);
+Route::redirect('/login.html', '/login', 301);
+Route::redirect('/registro.html', '/login', 301);

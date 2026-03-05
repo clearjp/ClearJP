@@ -6,7 +6,7 @@
 <div class="min-h-[70vh] flex items-center justify-center"
      style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
     <div class="w-full max-w-md bg-white border border-[#e5e7eb] rounded-2xl shadow-[0_12px_30px_rgba(0,0,0,0.10)] p-6">
-        <!-- muestro pestañas superiores (solo visuales). -->
+        <!-- muestro pesta?as superiores (solo visuales). -->
         <div class="bg-[#f2f6f6] rounded-xl p-1.5 flex gap-1.5">
             <button id="tab-login" type="button" class="flex-1 text-center py-2 rounded-lg bg-white text-[#006d77] font-semibold shadow-sm">
                 Iniciar sesión
@@ -45,9 +45,9 @@
                 Ingresar
             </button>
 
-            <href="#" class="block mt-3 text-center text-[0.95rem] text-[#006d77] hover:underline">
+            <a href="#" class="block mt-3 text-center text-[0.95rem] text-[#006d77] hover:underline">
                 ¿Olvidaste tu contraseña?
-            </>
+            </a>
         </form>
 
         <!-- presento el formulario de registro. -->
@@ -79,7 +79,7 @@
     </div>
 </div>
 
-{{-- manejo la lógica de pestañas y llamadas al API. --}}
+{{-- manejo la l?gica de pesta?as y llamadas al API. --}}
 <script>
     const API_BASE_URL = '{{ url('/api') }}';
 

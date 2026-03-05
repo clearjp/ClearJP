@@ -16,9 +16,9 @@
 {{-- renderizo el header con logo y menú. --}}
 <header>
     <div class="logo-container">
-        <href="/">
+        <a href="/">
             <img src="https://i.ibb.co/d45WbHC0/logo-clearjp-redondo.png" alt="logo-clearjp-redondo" class="logo-img">
-        </>
+        </a>
         <div class="brand-text">
             
             
@@ -27,15 +27,15 @@
     </div>
     <nav>
     <ul>
-        <li><href="{{ url('/') }}">Inicio</></li>
+        <li><a href="{{ url('/') }}">Inicio</a></li>
 
-        <li><href="{{ url('/servicios') }}">Servicios</></li>
+        <li><a href="{{ url('/servicios') }}">Servicios</a></li>
 
-        <li><href="{{ url('/productos') }}">Productos</></li>
+        <li><a href="{{ url('/productos') }}">Productos</a></li>
 
-        <li><href="{{ url('/faq') }}">FAQ</></li>
+        <li><a href="{{ url('/faq') }}">FAQ</a></li>
 
-        <li><href="{{ url('/login') }}" class="btn-login">Acceso</></li>
+        <li><a href="{{ url('/login') }}" class="btn-login">Acceso</a></li>
     </ul>
 </nav>
 </header>
