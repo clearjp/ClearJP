@@ -1,24 +1,21 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="es">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Acceder</title>
+  <title>Inicia sesión</title>
   <link rel="stylesheet" href="{{ asset('css/style.css') }}" />
 </head>
 <body>
   <header class="site-header">
     <div class="container header-inner">
       <a href="/" class="brand-mini"><img src="{{ asset('assets/logo-clearjp.png') }}" alt="Logo de ClearJP" class="logo"></a>
-      <div>
-        <div class="brand-name">ClearJP</div>
-      </div>
     </div>
   </header>
 
   <main class="container auth-page" id="main">
     <div class="auth-card">
-      <h1>Acceder</h1>
+      <h1>Inicia sesión</h1>
       <form id="loginForm" novalidate>
         <label for="u-email">Correo</label>
         <input id="u-email" type="email" required>
@@ -43,6 +40,9 @@
   <script src="{{ asset('js/auth.js') }}"></script>
 </body>
 </html>
+
+
+
 
 
 

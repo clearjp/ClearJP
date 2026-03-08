@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="es">
 <head>
   <meta charset="utf-8" />
@@ -11,7 +11,12 @@
     <div class="container header-inner">
       <a href="/" class="brand-mini"><img src="{{ asset('assets/logo-clearjp.png') }}" alt="Logo de ClearJP" class="logo"></a>
       <div>
-        <div class="brand-tag muted">Limpieza profesional y con impacto social</div>
+        <div class="brand-tag muted text-carousel" aria-label="Limpieza profesional con impacto social">
+  <span class="text-carousel-track" aria-hidden="true">
+    <span class="text-carousel-item">Limpieza profesional con impacto social</span>
+    <span class="text-carousel-item">Limpieza profesional con impacto social</span>
+  </span>
+</div>
       </div>
             <!-- Boton hamburguesa para navegacion en dispositivos moviles. -->
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Abrir menu">&#9776;</button>
@@ -71,22 +76,22 @@
       <div class="cards-row">
         <div class="icon-card">
           <div class="icon">1</div>
-          <h3>1. Solicita tu cotizacion</h3>
+          <h3>Solicita tu cotizacion</h3>
           <p>Completa el formulario o contactanos directamente.</p>
         </div>
         <div class="icon-card">
           <div class="icon">2</div>
-          <h3>2. Agendamos la visita</h3>
+          <h3>Agendamos la visita</h3>
           <p>Confirmamos disponibilidad y alcance del servicio.</p>
         </div>
         <div class="icon-card">
           <div class="icon">3</div>
-          <h3>3. Confirmas y pagas</h3>
+          <h3>Confirmas y pagas</h3>
           <p>Recibe la confirmacion y paga por el metodo que prefieras.</p>
         </div>
         <div class="icon-card">
           <div class="icon">4</div>
-          <h3>4. Disfruta tu limpieza</h3>
+          <h3>Disfruta tu limpieza</h3>
           <p>Recibe tu servicio profesional y calificanos.</p>
         </div>
       </div>
@@ -98,6 +103,10 @@
   <script src="{{ asset('js/auth.js') }}"></script>
 </body>
 </html>
+
+
+
+
 
 
 

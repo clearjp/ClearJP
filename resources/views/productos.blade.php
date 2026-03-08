@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="es">
 <head>
   <meta charset="utf-8" />
@@ -60,6 +60,8 @@
 <script src="{{ asset('js/main.js') }}"></script>
 </body>
 </html>
+
+
 
 
 

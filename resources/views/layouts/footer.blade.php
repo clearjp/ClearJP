@@ -1,6 +1,6 @@
-﻿<footer class="site-footer" role="contentinfo" aria-label="Pie de pagina">
+<footer class="site-footer" role="contentinfo" aria-label="Pie de pagina">
     <div class="footer-container">
-        <div class="footer-brand">ClearJP</div>
+        
 
         <nav class="footer-nav" aria-label="Navegacion del pie de pagina">
             <a href="/">Inicio</a>
