@@ -1,72 +1,66 @@
-@section('title', 'Nuestros Servicios | ClearJP') @extends('layouts.app')
-
-@section('content')
-<style>
-    /* aplico estilos específicos para la página de servicios. */
-    .hero-servicios {
-        background-color: var(--primary-color);
-        color: var(--white);
-        padding: 80px 10%;
-        text-align: center;
-    }
-    
-    .servicios-grid {
-        background-color: var(--light-bg); 
-        padding: 50px 10%;
-    }
-
-    .card-servicio {
-        background: var(--white);
-        border-top: 5px solid var(--secondary-color);
-        padding: 30px;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-        border-radius: 8px;
-        transition: transform 0.3s ease; /* añado esto para que se mueva suave al pasar el mouse */
-    }
-
-    .card-servicio:hover {
-        transform: translateY(-5px); /* Un pequeño efecto visual de elevación */
-    }
-
-    .text-highlight {
-        color: var(--primary-color);
-        font-weight: bold;
-        margin-bottom: 15px;
-        display: block;
-        font-size: 1.4rem;
-    }
-
-    .card-servicio p {
-        line-height: 1.6;
-        color: #555;
-    }
-</style>
-
-{{-- destaco el encabezado de servicios. --}}
-<section class="hero-servicios">
-    <h1>Nuestros Servicios</h1>
-    <p>Soluciones frescas y profesionales con el mejor impacto.</p>
-</section>
-
-{{-- organizo la grilla de servicios. --}}
-<div class="servicios-grid">
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
-        
-        <div class="card-servicio">
-            <span class="text-highlight">Limpieza de Oficinas</span>
-            <p>Espacios impecables para un mejor ambiente laboral. Nos enfocamos en la desinfección de áreas comunes y estaciones de trabajo.</p>
-        </div>
-
-        <div class="card-servicio">
-            <span class="text-highlight">Mantenimiento Industrial</span>
-            <p>Equipos especializados para trabajos pesados. Limpieza de maquinaria, bodegas y pisos de alta resistencia.</p>
-        </div>
-
-        <div class="card-servicio">
-            <span class="text-highlight">Limpieza Residencial</span>
-            <p>Llevamos la calidad profesional tu hogar. Limpieza profunda de alfombras, vidrios y áreas difíciles.</p>
-        </div>
-
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Servicios</title>
+  <link rel="stylesheet" href="{{ asset('css/style.css') }}" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="brand-mini"><img src="{{ asset('assets/logo-clearjp.png') }}" alt="Logo de ClearJP" class="logo"></a>
+      
+            <!-- Boton hamburguesa para navegacion en dispositivos moviles. -->
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Abrir menu">&#9776;</button>
+      <nav id="main-nav" aria-label="Navegacion principal">
+        <ul class="nav-list">
+          <li><a href="/">Inicio</a></li>
+          <li><a href="/servicios" aria-current="page">Servicios</a></li>
+          <li><a href="/productos">Productos</a></li>
+          <li><a href="/faq">FAQ</a></li>
+          <li><a href="/login" class="btn outline small">Acceder</a></li>
+        </ul>
+      </nav>
     </div>
-</div>
-@endsection
+  </header>
+
+  <main class="container" id="main">
+    <h1>Servicios</h1>
+    <p class="lead">Ofrecemos servicios para hogares y empresas con personal capacitado.</p>
+
+    <section class="service-list" aria-label="Lista de servicios">
+      <article class="service-item">
+        <h2>Limpieza por unica vez</h2>
+        <p>Servicio puntual para dejar su espacio impecable.</p>
+      </article>
+      <article class="service-item">
+        <h2>Limpieza recurrente</h2>
+        <p>Planes semanales, quincenales o mensuales.</p>
+      </article>
+      <article class="service-item">
+        <h2>Limpieza profunda</h2>
+        <p>Desinfeccion y limpieza de fondo de todas las areas.</p>
+      </article>
+      <article class="service-item">
+        <h2>Limpieza de mudanza</h2>
+        <p>Limpieza final para entrega o recibo de viviendas.</p>
+      </article>
+      <article class="service-item">
+        <h2>Limpieza post-construccion</h2>
+        <p>Retiro de polvo, restos y limpieza tecnica post-obra.</p>
+      </article>
+    </section>
+
+    <section style="margin-top:1.2rem">
+      <a href="/#reservar" class="btn primary">Reservar ahora</a>
+    </section>
+  </main>
+
+  @include('layouts.footer')
+<script src="{{ asset('js/main.js') }}"></script>
+</body>
+</html>
+
+
+

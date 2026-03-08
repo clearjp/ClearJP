@@ -1,100 +1,65 @@
-@section('title', 'Catálogo de Productos | ClearJP') @extends('layouts.app')
-
-@section('content')
-<style>
-    /* aplico estilos específicos para productos. */
-    .banner-productos {
-        background-color: var(--primary-color);
-        color: var(--white);
-        padding: 80px 10%;
-        text-align: center;
-    }
-    .productos-container {
-        background-color: var(--light-bg);
-        padding: 60px 10%;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 30px;
-    }
-    .producto-card {
-        background: var(--white);
-        border-radius: 12px;
-        overflow: hidden;
-        border-bottom: 4px solid var(--secondary-color);
-        box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-        transition: transform 0.3s ease;
-        padding: 20px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between; /* aseguro que el botón siempre quede al final */
-    }
-    .producto-card:hover {
-        transform: translateY(-5px);
-    }
-    .producto-card h3 {
-        color: var(--primary-color);
-        margin: 10px 0;
-    }
-    .badge {
-        display: inline-block;
-        width: fit-content;
-        background-color: var(--secondary-color);
-        color: var(--primary-color);
-        padding: 5px 12px;
-        border-radius: 20px;
-        font-size: 0.8rem;
-        font-weight: bold;
-    }
-    /* añado un estilo para el botón que sea consistente con tu app.blade.php */
-    .btn-detalle {
-        background: var(--primary-color);
-        color: var(--white);
-        border: none;
-        padding: 10px 15px;
-        border-radius: 5px;
-        cursor: pointer;
-        font-weight: 600;
-        margin-top: 15px;
-        transition: 0.3s;
-    }
-    .btn-detalle:hover {
-        opacity: 0.9;
-    }
-</style>
-
-{{-- presento el banner de productos. --}}
-<section class="banner-productos">
-    <h1>Catálogo de Productos</h1>
-    <p>Insumos certificados para una desinfección total y segura.</p>
-</section>
-
-{{-- dispongo las tarjetas de productos en grilla. --}}
-<div class="productos-container">
-    <div class="producto-card">
-        <div>
-            <span class="badge">Ecológico</span>
-            <h3>Desinfectante Multiusos</h3>
-            <p>Fórmula de alta eficiencia que elimina el 99.9% de gérmenes sin químicos corrosivos.</p>
-        </div>
-        <button class="btn-detalle">Ver detalles</button>
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Productos</title>
+  <link rel="stylesheet" href="{{ asset('css/style.css') }}" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="brand-mini"><img src="{{ asset('assets/logo-clearjp.png') }}" alt="Logo de ClearJP" class="logo"></a>
+      
+            <!-- Boton hamburguesa para navegacion en dispositivos moviles. -->
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Abrir menu">&#9776;</button>
+      <nav id="main-nav" aria-label="Navegacion principal">
+        <ul class="nav-list">
+          <li><a href="/">Inicio</a></li>
+          <li><a href="/servicios">Servicios</a></li>
+          <li><a href="/productos" aria-current="page">Productos</a></li>
+          <li><a href="/faq">FAQ</a></li>
+          <li><a href="/login" class="btn outline small">Acceder</a></li>
+        </ul>
+      </nav>
     </div>
+  </header>
 
-    <div class="producto-card">
-        <div>
-            <span class="badge">Industrial</span>
-            <h3>Desengrasante Pesado</h3>
-            <p>Ideal para cocinas industriales y motores. Remueve grasa difícil en segundos.</p>
-        </div>
-        <button class="btn-detalle">Ver detalles</button>
-    </div>
+  <main class="container" id="main">
+    <h1>Productos de aseo</h1>
+    <p class="lead">Venta de productos seleccionados para limpieza profesional y domestica.</p>
 
-    <div class="producto-card">
-        <div>
-            <span class="badge">Hogar</span>
-            <h3>Kit de Microfibras</h3>
-            <p>Paños de alta absorción que no dejan rastro ni rayan las superficies delicadas.</p>
-        </div>
-        <button class="btn-detalle">Ver detalles</button>
-    </div>
-</div>
-@endsection
+    <section class="product-grid" aria-label="Productos">
+      <article class="product">
+        <img src="{{ asset('img/detergente.png') }}" alt="Detergente multiusos 1L">
+        <h3>Detergente multiusos 1L</h3>
+        <p class="small muted">2500 ml - Concentrado</p>
+        <p class="price">COP $12.000</p>
+        <button class="btn outline">Agregar al carrito</button>
+      </article>
+
+      <article class="product">
+        <img src="{{ asset('img/detergente.png') }}" alt="Desinfectante 500ml">
+        <h3>Desinfectante 500ml</h3>
+        <p class="small muted">Ideal para superficies</p>
+        <p class="price">COP $8.000</p>
+        <button class="btn outline">Agregar al carrito</button>
+      </article>
+
+      <article class="product">
+        <img src="{{ asset('img/detergente.png') }}" alt="Panos microfibra">
+        <h3>Panos microfibra (pack 3)</h3>
+        <p class="small muted">Suaves y absorbentes</p>
+        <p class="price">COP $10.000</p>
+        <button class="btn outline">Agregar al carrito</button>
+      </article>
+    </section>
+  </main>
+
+  @include('layouts.footer')
+<script src="{{ asset('js/main.js') }}"></script>
+</body>
+</html>
+
+
+

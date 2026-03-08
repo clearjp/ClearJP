@@ -1,9 +1,9 @@
-@section('title', 'Inicio | ClearJP Limpieza Profesional') @extends('layouts.app')
+﻿@section('title', 'Inicio | ClearJP Limpieza Profesional') @extends('layouts.app')
 
 @section('content')
 
 <style>
-    /* Estilos espec?ficos de esta p?gina */
+    /* Estilos espec?ficos de esta pagina */
     .hero {
         display: flex; justify-content: space-between; align-items: flex-start;
         padding: 60px 10%; flex-wrap: wrap; gap: 40px;
@@ -32,7 +32,7 @@
         padding: 12px; border-radius: 5px; font-weight: 600; cursor: pointer; margin-top: 10px;
     }
 
-    /* Secci?n Pasos */
+    /* Seccion Pasos */
     .steps-section { text-align: center; padding: 60px 10%; background-color: var(--light-bg); } /* uso el fondo claro aqu? para contrastar */
     .steps-section h2 { color: var(--primary-color); margin-bottom: 50px; font-size: 1.8rem; }
     .steps-container { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 20px; }
@@ -49,7 +49,7 @@
     .step-item p { font-size: 0.85rem; color: #666; line-height: 1.5; padding: 0 10px; }
 </style>
 
-{{-- muestro la secci?n hero con reserva r?pida. --}}
+{{-- muestro la sección hero con reserva rápida. --}}
 <section class="hero">
     <div class="hero-content">
         <h2>Limpieza confiable, sostenible y con impacto social</h2>
@@ -116,3 +116,4 @@
 </section>
 
 @endsection
+

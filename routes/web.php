@@ -8,11 +8,12 @@ use Illuminate\Support\Facades\Route;
 |--------------------------------------------------------------------------
 | Blade pages
 */
-Route::view('/', 'welcome')->name('home');
-Route::view('/servicios', 'servicios')->name('servicios');
-Route::view('/productos', 'productos')->name('productos');
-Route::view('/faq', 'faq')->name('faq');
-Route::view('/login', 'login')->name('login');
+Route::get('/', fn() => view('index'));
+Route::get('/login', fn() => view('login'));
+Route::get('/registro', fn() => view('registro'));
+Route::get('/productos', fn() => view('productos'));
+Route::get('/servicios', fn() => view('servicios'));
+Route::get('/faq', fn() => view('faq'));
 
 /*
 |--------------------------------------------------------------------------
@@ -25,4 +26,4 @@ Route::redirect('/servicios.html', '/servicios', 301);
 Route::redirect('/productos.html', '/productos', 301);
 Route::redirect('/faq.html', '/faq', 301);
 Route::redirect('/login.html', '/login', 301);
-Route::redirect('/registro.html', '/login', 301);
+Route::redirect('/registro.html', '/registro', 301);

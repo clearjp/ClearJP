@@ -2,17 +2,21 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\AuthController;
+use App\Http\Controllers\Api\ReservaRapidaController;
 
 /*
 |--------------------------------------------------------------------------
-| defino las rutas de API
+| Defino las rutas de API.
 |--------------------------------------------------------------------------
-| expongo estas rutas bajo el prefijo /api.
-| Ejemplo: POST /api/register y POST /api/login
+| Estas rutas quedan publicadas bajo el prefijo /api.
+| Ejemplo: POST /api/register, POST /api/login y POST /api/reservas-rapidas
 */
 
-// registro usuarios con "usuario" (email) y "password".
+// Registro de usuarios con "usuario" (email) y "password".
 Route::post('/register', [AuthController::class, 'register']);
 
-// inicio sesión con "usuario" (email) y "password".
+// Inicio de sesion con "usuario" (email) y "password".
 Route::post('/login', [AuthController::class, 'login']);
+
+// Registro de solicitudes del formulario de reserva rapida.
+Route::post('/reservas-rapidas', [ReservaRapidaController::class, 'store']);

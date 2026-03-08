@@ -1,78 +1,67 @@
-@section('title', 'Preguntas Frecuentes | ClearJP') @extends('layouts.app')
-
-@section('content')
-<style>
-    /* aplico estilos al banner superior. */
-    .banner-faq {
-        background-color: var(--primary-color);
-        color: var(--white);
-        padding: 80px 10%;
-        text-align: center;
-    }
-
-    /* defino el contenedor central de preguntas. */
-    .faq-section {
-        max-width: 800px;
-        margin: 50px auto;
-        padding: 0 20px;
-    }
-
-    /* estilo cada bloque de pregunta. */
-    .faq-item {
-        margin-bottom: 25px;
-        padding: 20px;
-        background-color: var(--light-bg);
-        border-left: 6px solid var(--secondary-color);
-        border-radius: 0 10px 10px 0;
-        transition: transform 0.3s ease, box-shadow 0.3s ease; /* añado suavidad */
-    }
-
-    /* añado un efecto sutil al pasar el mouse sobre la pregunta */
-    .faq-item:hover {
-        transform: translateX(10px);
-        box-shadow: 2px 5px 15px rgba(0,0,0,0.05);
-    }
-
-    .faq-item h3 {
-        color: var(--primary-color);
-        margin-top: 0;
-        font-size: 1.2rem;
-        margin-bottom: 10px;
-    }
-
-    .faq-item p {
-        color: var(--text-color);
-        line-height: 1.6;
-        margin-bottom: 0;
-    }
-</style>
-
-{{-- presento el banner de FAQ. --}}
-<section class="banner-faq">
-    <h1>Preguntas Frecuentes</h1>
-    <p>Todo lo que necesitas saber sobre nuestros servicios de limpieza profesional.</p>
-</section>
-
-{{-- agrupo las preguntas frecuentes. --}}
-<div class="faq-section">
-    <div class="faq-item">
-        <h3>¿Cómo puedo agendar un servicio?</h3>
-        <p>Puedes hacerlo través de nuestro formulario de "Reserva rápida" en la página de inicio o enviándonos un mensaje directo por WhatsApp.</p>
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>FAQ - ClearJP</title>
+  <link rel="stylesheet" href="{{ asset('css/style.css') }}" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="brand-mini"><img src="{{ asset('assets/logo-clearjp.png') }}" alt="Logo de ClearJP" class="logo"></a>
+      
+            <!-- Boton hamburguesa para navegacion en dispositivos moviles. -->
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Abrir menu">&#9776;</button>
+      <nav id="main-nav" aria-label="Navegacion principal">
+        <ul class="nav-list">
+          <li><a href="/">Inicio</a></li>
+          <li><a href="/servicios">Servicios</a></li>
+          <li><a href="/productos">Productos</a></li>
+          <li><a href="/faq" aria-current="page">FAQ</a></li>
+          <li><a href="/login" class="btn outline small">Acceder</a></li>
+        </ul>
+      </nav>
     </div>
+  </header>
 
-    <div class="faq-item">
-        <h3>¿Los productos que usan son tóxicos?</h3>
-        <p>No. Utilizamos exclusivamente productos biodegradables y certificados que son seguros para niños, mascotas y el medio ambiente.</p>
-    </div>
+  <main class="container" id="main">
+    <h1>Preguntas frecuentes</h1>
+    <section class="faq-list" aria-label="Preguntas frecuentes">
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">Como puedo reservar un servicio?</button>
+        <div class="faq-" hidden>
+          <p>Puedes reservar desde nuestro formulario en la pagina de inicio o llamando al +57 304 346 0665. Te confirmaremos por correo y WhatsApp.</p>
+        </div>
+      </div>
 
-    <div class="faq-item">
-        <h3>¿Qué sucede si necesito cancelar reserva?</h3>
-        <p>Solicitamos un aviso de al menos 24 horas de anticipación para reprogramar tu servicio sin cargos adicionales.</p>
-    </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">Que formas de pago aceptan?</button>
+        <div class="faq-" hidden>
+          <p>Aceptamos transferencia bancaria, PSE (proximamente) y pago en efectivo al finalizar el servicio.</p>
+        </div>
+      </div>
 
-    <div class="faq-item">
-        <h3>¿Ofrecen servicios para empresas grandes?</h3>
-        <p>Sí, contamos con equipo industrial y personal capacitado para el mantenimiento de naves, bodegas y edificios corporativos.</p>
-    </div>
-</div>
-@endsection
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">Los productos estan incluidos?</button>
+        <div class="faq-" hidden>
+          <p>En limpiezas estandar utilizamos nuestros productos. Si prefieres que utilicemos los tuyos, indicalo en la reserva.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">Tienen contrato para empresas?</button>
+        <div class="faq-" hidden>
+          <p>Si, ofrecemos contratos y reportes periodicos para servicios comerciales. Contacta ventas para cotizacion.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  @include('layouts.footer')
+<script src="{{ asset('js/main.js') }}"></script>
+</body>
+</html>
+
+
+

@@ -4,53 +4,48 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>ClearJP</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="{{ asset('css/style.css') }}" />
 </head>
 <body>
-  <!-- presento la página de inicio con acceso rápido reservas. -->
-  <a class="skip-link" href="#main">Saltar al contenido principal</a>
-  <!-- muestro el encabezado con navegación principal. -->
   <header class="site-header">
     <div class="container header-inner">
-      <a href="index.html" class="brand-mini"><img src="assets/500x500_Logo clearjp.png" alt="Logo de ClearJP" class="logo">
-</a>
+      <a href="/" class="brand-mini"><img src="{{ asset('assets/logo-clearjp.png') }}" alt="Logo de ClearJP" class="logo"></a>
       <div>
-        <div class="brand-name">ClearJP</div>
         <div class="brand-tag muted">Limpieza profesional y con impacto social</div>
       </div>
-      <nav aria-label="Navegación principal">
+            <!-- Boton hamburguesa para navegacion en dispositivos moviles. -->
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Abrir menu">&#9776;</button>
+      <nav id="main-nav" aria-label="Navegacion principal">
         <ul class="nav-list">
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="servicios.html">Servicios</a></li>
-          <li><a href="productos.html">Productos</a></li>
-          <li><a href="faq.html">FAQ</a></li>
-          <li><a href="login.html" class="btn outline small">Iniciar sesiÃƒÂ³n</a></li>
+          <li><a href="/">Inicio</a></li>
+          <li><a href="/servicios">Servicios</a></li>
+          <li><a href="/productos">Productos</a></li>
+          <li><a href="/faq">FAQ</a></li>
+          <li><a href="/login" class="btn outline small">Acceder</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <!-- organizo el contenido principal de la portada. -->
   <main id="main" class="container">
-    <!-- destaco el mensaje principal y la reserva rápida. -->
     <section class="hero">
       <div class="hero-left">
         <h1>Limpieza confiable, sostenible y con impacto social</h1>
-        <p class="lead">Reserva tu servicio en lÃƒÂ­nea y recibe confirmacion por WhatsApp o correo electrÃƒÂ³nico.</p>
+        <p class="lead">Reserva tu servicio en linea y recibe confirmacion por WhatsApp o correo electronico.</p>
         <div class="actions">
           <a href="#reservar" class="btn primary">Reservar ahora</a>
-          <a href="servicios.html" class="btn outline">Ver servicios</a>
+          <a href="/servicios" class="btn outline">Ver servicios</a>
         </div>
       </div>
 
       <aside class="hero-right">
         <div class="card auth-card" id="reservar">
-          <h3>Reserva rÃƒÂ¡pida</h3>
+          <h3>Reserva rapida</h3>
           <form id="quickBooking" novalidate>
             <label for="q-name">Nombre completo</label>
             <input id="q-name" type="text" required>
 
-            <label for="q-phone">TelÃ¯Â¿Â½?fono</label>
+            <label for="q-phone">Telefono</label>
             <input id="q-phone" type="tel" required>
 
             <label for="q-service">Tipo de servicio</label>
@@ -71,42 +66,38 @@
       </aside>
     </section>
 
-    <!-- explico los pasos para reservar. -->
     <section aria-label="Pasos para reservar">
-      <h2 class="center">CÃƒÂ³mo reservar tu limpieza</h2>
+      <h2 class="center">Como reservar tu limpieza</h2>
       <div class="cards-row">
         <div class="icon-card">
-          <div class="icon">Ã°Å¸Â§Â¾</div>
-          <h3>1. Solicita tu cotizaciÃƒÂ³n</h3>
-          <p>Completa el formulario o contÃƒÂ¡ctanos directamente.</p>
+          <div class="icon">1</div>
+          <h3>1. Solicita tu cotizacion</h3>
+          <p>Completa el formulario o contactanos directamente.</p>
         </div>
         <div class="icon-card">
-          <div class="icon">Ã°Å¸â€œâ€¦</div>
+          <div class="icon">2</div>
           <h3>2. Agendamos la visita</h3>
           <p>Confirmamos disponibilidad y alcance del servicio.</p>
         </div>
         <div class="icon-card">
-          <div class="icon">Ã¢Å“â€¦</div>
+          <div class="icon">3</div>
           <h3>3. Confirmas y pagas</h3>
-          <p>Recibe la confirmaciÃƒÂ³n y paga por el mÃ¯Â¿Â½?todo que prefieras.</p>
+          <p>Recibe la confirmacion y paga por el metodo que prefieras.</p>
         </div>
         <div class="icon-card">
-          <div class="icon">Ã°Å¸ÂÂ </div>
+          <div class="icon">4</div>
           <h3>4. Disfruta tu limpieza</h3>
-          <p>Recibe tu servicio profesional y califÃƒÂ­canos.</p>
+          <p>Recibe tu servicio profesional y calificanos.</p>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- cierro con datos de contacto y derechos. -->
-  <footer class="site-footer">
-    <div class="container">
-      Ã¯Â¿Â½? <span id="year"></span> ClearJP Ã¯Â¿Â½? <a href="mailto:clearjp@yahoo.com">clearjp@yahoo.com</a> Ã¯Â¿Â½? +57 304 346 0665
-    </div>
-  </footer>
-
-  <script src="js/main.js"></script>
-  <script src="js/auth.js"></script>
+  @include('layouts.footer')
+<script src="{{ asset('js/main.js') }}"></script>
+  <script src="{{ asset('js/auth.js') }}"></script>
 </body>
 </html>
+
+
+
